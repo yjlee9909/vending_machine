@@ -156,3 +156,6 @@ button {
   margin: -1px;
   overflow: hidden;
 }
+.blind-none {
+  display: none;
+}

@@ -13,6 +13,8 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+
 header h1 {
     display: none;
 }
@@ -149,7 +151,7 @@ main {
 .bending-my-money div {
     width: 306px;
     height: 32px;
-    background: #EAE8FE;
+    
     padding: 6px 10px;
     border-radius: 5px;
     background: #EAE8FE;
@@ -159,4 +161,51 @@ main {
     background: #FFFFFF;
     width: 360px;
     height: 474px;
+    /* padding: 12px 18px 12px 12px; */
+    padding: 25px 27px 26px 27px;
+}
+.bending-choose .blind {
+
+}
+.bending-choose .get-contain {
+    width: 304px;
+    height: 362px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    background: #EAE8FE;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 18px 6px 12px;
+    /* margin: 13px 27px 26px 27px; */
+    margin-top: 13px;
+    margin-bottom: 6px;
+}
+
+.bending-choose .getdrink {
+    display: flex;
+    width: 276px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    padding: 6px 8px 7px 10px;
+    justify-content: space-between;
+    
+}
+.bending-choose img {
+    width: 18px;
+    height: 33px;
+}
+.bending-choose p {
+    /* position: absolute; */
+}
+.bending-choose .get-num {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    position: relative;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

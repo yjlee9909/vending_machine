@@ -121,11 +121,45 @@ main {
     flex-wrap: wrap;
 }
 .bending-get .get-list {
+    width: 200px;
+    height: 106px;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
     background: #EAE8FE;
     width: 200px;
+    display: flex;
+    padding: 12px 10px 6px 12px;
+    
+    overflow: scroll;
 }
+.bending-get .drink {
+    display: flex;
+    width: 170px;
+    height: 46px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    padding: 6px 8px 7px 10px;
+    justify-content: space-between;
+    
+}
+.bending-get .drink img {
+    width: 18px;
+    height: 33px;
+}
+.bending-get .drink .get-num {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    position: relative;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .bending-get .get-btn {
     width: 94px;
     padding: 43px 35px;
@@ -181,7 +215,7 @@ main {
     margin-bottom: 6px;
 }
 
-.bending-choose .getdrink {
+.bending-choose .drink.get {
     display: flex;
     width: 276px;
     background-color: #FFFFFF;

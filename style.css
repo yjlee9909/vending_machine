@@ -8,8 +8,6 @@ body {
 }
 #wrapper {
     width: 748px;
-    background-color: blue;
-    /* margin-bottom: 171px; */
     margin: 0 auto;
     text-align: center;
 }
@@ -21,14 +19,12 @@ header h1 {
 .logo_contain {
     width: 436px;
     height: 204px;
-    background-color: blueviolet;
     margin: auto;
     margin-bottom: 43px;
 }
 .logo {
     width: 386px;
     height: 180px;
-    background-color: bisque;
 }
 main {
     display: flex;

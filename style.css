@@ -265,6 +265,21 @@ main {
     padding: 6px 10px;
     border-radius: 5px;
     background: #EAE8FE;
+    display: flex;
+    justify-content: space-between;
+}
+.bending-my-money span:nth-child(1) {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 20px;
+    
+}
+.bending-my-money span:nth-child(2) {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 20px;
+    display: flex;
+    
 }
 .bending-choose {
     margin-top: 20px;
@@ -274,8 +289,10 @@ main {
     /* padding: 12px 18px 12px 12px; */
     padding: 25px 27px 26px 27px;
 }
-.bending-choose .blind {
-
+.bending-choose p {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 20px;
 }
 
 .bending-choose .get-contain {
@@ -307,8 +324,11 @@ main {
     width: 18px;
     height: 33px;
 }
-.bending-choose p {
-    /* position: absolute; */
+.bending-choose .drink.get p {
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 13px;
+    
 }
 .bending-choose .get-num {
     width: 30px;
@@ -320,4 +340,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 1.4rem;
+}
+.bending-choose .get-contain + .total-money {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 17px;
+    text-align: right;
+    
 }

@@ -1,4 +1,4 @@
-h1,p, body {
+h1,p, body, input {
     padding: 0;
     margin: 0;
 }
@@ -51,8 +51,20 @@ main {
     width: 94px;
     height: 130px;
     border-radius: 10px;
-    border: 1px solid black;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border: 1px solid #000;
     
+}
+
+
+.bending-machine .list:hover {
+    /* outline: 3px solid #6327FE; */
+    border: 3px solid #6327FE;
+    border-radius: 10px;
+    width: 94px;
+    height: 130px;
+    
+    /* margin: -1px; */
 }
 .bending-machine .list:nth-child(-n+3) {
     margin-bottom: 12px;
@@ -62,6 +74,12 @@ main {
 .bending-machine .list img {
     width: 36px;
     height: 65px;
+    margin: 11px 29px 6px 29px;
+}
+.bending-machine .list p {
+    margin-right: 10px;
+    margin-bottom: 7px;
+    margin-left: 11px;
 }
 
 .bending-machine .bending-menu ul li > button {
@@ -76,11 +94,13 @@ main {
     line-height: 100%;
     color: #FFFFFF;
     padding: 5px 16px 5px 15px;
+    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .bending-money {
     height: 75px;
-    background-color: darkgoldenrod;
+    
     margin-top: 20px;
     margin-bottom: 11px;
     display: flex;
@@ -98,18 +118,50 @@ main {
 .bending-money .change {
     margin-bottom: 11px;
     border: none;
+    font-size: 1.4rem;
+}
+.bending-money .money.change {
+    padding: 6px 10px 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.bending-money .minus-money > span {
+    text-align: right;
 }
 .bending-money .btn {
     width: 94px;
     height: 33px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
     /* border: none; */
     /* border: 1px solid #BDBDBD; */
     border-radius: 5px;
+    font-size: 1.3rem;
+    line-height: 19px;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
 }
+
 .bending-money .in {
     background-color: #FFFFFF;
+
+}
+
+.bending-money input {
+    width: 197px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    box-sizing : border-box;
+
+}
+.bending-money #input-in::placeholder {
+    color: #BDBDBD;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    padding-left: 6px;
+    
 }
 
 .bending-get {
@@ -124,10 +176,36 @@ main {
     background: #EAE8FE;
     width: 200px;
     display: flex;
-    padding: 12px 10px 6px 12px;
+    padding: 12px 6px 6px 10px;
+    overflow: auto;
     
-    overflow: scroll;
+    /* overflow-y: scroll;
+    scrollbar-color: rebeccapurple green; */
 }
+.bending-get .get-list::-webkit-scrollbar {
+    width: 12px;
+    
+}
+.bending-get .get-list::-webkit-scrollbar-thumb {
+    /* width: 4px; */
+    height: 79px;
+    border-radius: 50px;
+    background-clip: padding-box;
+    /* padding-right: 3px; */
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+}
+.bending-get .get-list::-webkit-scrollbar-track {
+    height: 106px;
+    background: transparent;
+} 
+
+/* .bending-get .get-list::-webkit-scrollbar-track {
+    background-color: transparent;
+    
+} */
+
 .bending-get .drink {
     display: flex;
     width: 170px;
@@ -166,9 +244,11 @@ main {
     line-height: 19px;
     background: #6327FE;
     color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3)); */
     border-radius: 5px;
     margin-left: 12px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 .bending-my-money {
@@ -197,6 +277,7 @@ main {
 .bending-choose .blind {
 
 }
+
 .bending-choose .get-contain {
     width: 304px;
     height: 362px;
@@ -209,6 +290,7 @@ main {
     /* margin: 13px 27px 26px 27px; */
     margin-top: 13px;
     margin-bottom: 6px;
+    overflow-y: scroll;
 }
 
 .bending-choose .drink.get {

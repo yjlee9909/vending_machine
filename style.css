@@ -36,40 +36,53 @@ main {
     margin-right: 28px;
     padding: 31px 27px 28px 27px;
 }
-.bending-menu h2 {
+.bending-machine h2 {
     display: none;
+}
+.bending-machine .bending-menu {
+    /* margin: 31px 24px 17px 24px; */
 }
 .bending-machine .bending-menu ul {
     display: flex;
     flex-wrap: wrap;
-    background-color: hotpink;
     justify-content: space-between;
-    
-    
 }
 .bending-machine .list {
     width: 94px;
     height: 130px;
     border-radius: 10px;
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    /* box-sizing: border-box; */
+    /* position: relative; */
+    /* border: hidd; */
     
 }
-
-
 .bending-machine .list:hover {
-    /* outline: 3px solid #6327FE; */
-    border: 3px solid #6327FE;
+    /* position: relative;
+    width: 100px;
+    height: 136px; */
+    outline: 3px solid #6327FE;
     border-radius: 10px;
-    width: 94px;
-    height: 130px;
-    
-    /* margin: -1px; */
+    /* transform: scale(1); */
 }
+
+
+
+
 .bending-machine .list:nth-child(-n+3) {
     margin-bottom: 12px;
+    
 }
-
+.bending-machine .list .sold-out {
+    background-image: url(./images/Sold-out.png);
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1;
+}
 
 .bending-machine .list img {
     width: 36px;
@@ -96,11 +109,12 @@ main {
     padding: 5px 16px 5px 15px;
     margin-right: 12px;
     margin-left: 12px;
+    margin-bottom: 9px;
+    outline: none;
 }
 
 .bending-money {
     height: 75px;
-    
     margin-top: 20px;
     margin-bottom: 11px;
     display: flex;
@@ -141,7 +155,8 @@ main {
     border-radius: 5px;
     font-size: 1.3rem;
     line-height: 19px;
-    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+    /* filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3)); */
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
 }
 
 .bending-money .in {
@@ -167,6 +182,7 @@ main {
 .bending-get {
     display: flex;
     flex-wrap: wrap;
+    
 }
 .bending-get .get-list {
     width: 200px;
@@ -177,34 +193,30 @@ main {
     width: 200px;
     display: flex;
     padding: 12px 6px 6px 10px;
-    overflow: auto;
-    
+    /* overflow: auto; */
+    overflow-y: scroll;
+    flex-direction: column;
     /* overflow-y: scroll;
     scrollbar-color: rebeccapurple green; */
 }
-.bending-get .get-list::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     width: 12px;
     
 }
-.bending-get .get-list::-webkit-scrollbar-thumb {
-    /* width: 4px; */
+.scroll::-webkit-scrollbar-thumb {
     height: 79px;
     border-radius: 50px;
     background-clip: padding-box;
-    /* padding-right: 3px; */
     background-color: #ffffff;
-    background-clip: padding-box;
     border: 4px solid transparent;
 }
-.bending-get .get-list::-webkit-scrollbar-track {
+.scroll::-webkit-scrollbar-track {
     height: 106px;
     background: transparent;
 } 
 
-/* .bending-get .get-list::-webkit-scrollbar-track {
-    background-color: transparent;
-    
-} */
+
+
 
 .bending-get .drink {
     display: flex;

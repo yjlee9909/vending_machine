@@ -1,4 +1,7 @@
-h1,p, body, input {
+h1,
+p,
+body,
+input {
     padding: 0;
     margin: 0;
 }
@@ -6,6 +9,7 @@ h1,p, body, input {
 body {
     background-color: #EAE8FE;
 }
+
 #wrapper {
     width: 748px;
     margin: 0 auto;
@@ -16,19 +20,23 @@ body {
 header h1 {
     display: none;
 }
+
 .logo_contain {
     width: 436px;
     height: 204px;
     margin: auto;
     margin-bottom: 43px;
 }
+
 .logo {
     width: 386px;
     height: 180px;
 }
+
 main {
     display: flex;
 }
+
 .bending-machine {
     background: #FFFFFF;
     width: 360px;
@@ -36,17 +44,21 @@ main {
     margin-right: 28px;
     padding: 31px 27px 28px 27px;
 }
+
 .bending-machine h2 {
     display: none;
 }
+
 .bending-machine .bending-menu {
     /* margin: 31px 24px 17px 24px; */
 }
+
 .bending-machine .bending-menu ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .bending-machine .list {
     width: 94px;
     height: 130px;
@@ -56,6 +68,7 @@ main {
     position: relative;
     z-index: 0.9;
 }
+
 .bending-machine .list:hover {
     /* position: relative;
     width: 100px;
@@ -70,50 +83,44 @@ main {
 
 .bending-machine .list:nth-child(-n+3) {
     margin-bottom: 12px;
-    
+
 }
+
 /* 품절 이미지 구현 */
-/* .bending-machine .list.sold-out {
-    background: url(/images/Sold-out.png);
-    z-index: 1;
-    color: #FFFFFF;
-    background-size: 57px 45px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-} 
 .bending-machine .list.sold-out::after {
     content: "";
     background-image: url(./images/Sold-out.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
+    background-size: 57.51px 44.85px;
+    background-position: center;
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
+    color: transparent;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-} */
+}
 
 .bending-machine .list img {
     width: 36px;
     height: 65px;
     margin: 11px 29px 6px 29px;
 }
+
 .bending-machine .list p {
     margin-right: 10px;
     margin-bottom: 7px;
     margin-left: 11px;
     font-weight: 500;
-font-size: 0.9rem;
-line-height: 13px;
-color: #333333;
+    font-size: 0.9rem;
+    line-height: 13px;
+    color: #333333;
 }
 
-.bending-machine .bending-menu ul li > button {
+.bending-machine .bending-menu ul li>button {
     background: #6327FE;
     border-radius: 50px;
     width: 70px;
-    
+
     font-family: 'Noto Sans KR';
     font-weight: 500;
     font-style: normal;
@@ -145,11 +152,13 @@ color: #333333;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
 }
+
 .bending-money .change {
     margin-bottom: 11px;
     border: none;
     font-size: 1.4rem;
 }
+
 .bending-money .money.change {
     padding: 6px 10px 7px 10px;
     display: flex;
@@ -158,14 +167,15 @@ color: #333333;
 
 }
 
-.bending-money .minus-money > span {
+.bending-money .minus-money>span {
     text-align: right;
 }
+
 .bending-money .btn {
     width: 94px;
     height: 33px;
     background: #FFFFFF;
-    
+
     /* border: none; */
     /* border: 1px solid #BDBDBD; */
     border-radius: 5px;
@@ -184,22 +194,24 @@ color: #333333;
     width: 197px;
     height: 30px;
     border: 1px solid #BDBDBD;
-    box-sizing : border-box;
+    box-sizing: border-box;
 
 }
+
 .bending-money #input-in::placeholder {
     color: #BDBDBD;
     padding-top: 6px;
     padding-bottom: 8px;
     padding-left: 6px;
-    
+
 }
 
 .bending-get {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
+
 .bending-get .get-list {
     width: 200px;
     height: 106px;
@@ -215,10 +227,12 @@ color: #333333;
     /* overflow-y: scroll;
     scrollbar-color: rebeccapurple green; */
 }
+
 .scroll::-webkit-scrollbar {
     width: 12px;
-    
+
 }
+
 .scroll::-webkit-scrollbar-thumb {
     height: 79px;
     border-radius: 50px;
@@ -226,10 +240,11 @@ color: #333333;
     background-color: #ffffff;
     border: 4px solid transparent;
 }
+
 .scroll::-webkit-scrollbar-track {
     height: 106px;
     background: transparent;
-} 
+}
 
 
 
@@ -245,19 +260,22 @@ color: #333333;
     justify-content: space-between;
     align-items: center;
 }
+
 .bending-get .drink img {
     width: 18px;
     height: 33px;
     margin-right: 10px;
 }
+
 .bending-get .drink p {
     font-weight: 500;
-font-size: 0.9rem;
-line-height: 13px;
-color: #333333;
-flex-grow: 1;
+    font-size: 0.9rem;
+    line-height: 13px;
+    color: #333333;
+    flex-grow: 1;
     text-align: left;
 }
+
 .bending-get .drink .get-num {
     width: 30px;
     height: 30px;
@@ -269,9 +287,9 @@ flex-grow: 1;
     align-items: center;
     justify-content: center;
     font-weight: 500;
-font-size: 1.4rem;
-line-height: 20px;
-color: #000000;
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: #000000;
 }
 
 
@@ -289,7 +307,7 @@ color: #000000;
     border-radius: 5px;
     margin-left: 12px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    
+
 }
 
 .bending-my-money {
@@ -299,29 +317,33 @@ color: #000000;
     background: #FFFFFF;
     padding: 9px 27px;
 }
+
 .bending-my-money div {
     width: 306px;
     height: 32px;
-    
+
     padding: 6px 10px;
     border-radius: 5px;
     background: #EAE8FE;
     display: flex;
     justify-content: space-between;
 }
+
 .bending-my-money span:nth-child(1) {
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 20px;
-    
+
 }
+
 .bending-my-money span:nth-child(2) {
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 20px;
     display: flex;
-    
+
 }
+
 .bending-choose {
     margin-top: 20px;
     background: #FFFFFF;
@@ -330,6 +352,7 @@ color: #000000;
     /* padding: 12px 18px 12px 12px; */
     padding: 25px 27px 26px 27px;
 }
+
 .bending-choose p {
     font-weight: 700;
     font-size: 1.4rem;
@@ -361,11 +384,13 @@ color: #000000;
     justify-content: space-between;
     align-items: center;
 }
+
 .bending-choose img {
     width: 18px;
     height: 33px;
     margin-right: 10px;
 }
+
 .bending-choose .drink.get p {
     font-weight: 500;
     font-size: 0.9rem;
@@ -375,6 +400,7 @@ color: #000000;
     color: #333333;
 
 }
+
 .bending-choose .get-num {
     width: 30px;
     height: 30px;
@@ -389,10 +415,11 @@ color: #000000;
     line-height: 20px;
     font-size: 1.4rem;
 }
-.bending-choose .get-contain + .total-money {
+
+.bending-choose .get-contain+.total-money {
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 17px;
     text-align: right;
-    
+
 }

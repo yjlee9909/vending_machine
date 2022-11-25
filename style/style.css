@@ -7,7 +7,7 @@ input {
 }
 
 body {
-    background-color: #EAE8FE;
+    background-color: #eae8fe;
 }
 
 #wrapper {
@@ -15,7 +15,6 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-
 
 header h1 {
     display: none;
@@ -38,7 +37,7 @@ main {
 }
 
 .bending-machine {
-    background: #FFFFFF;
+    background: #ffffff;
     width: 360px;
     height: 545px;
     margin-right: 28px;
@@ -63,28 +62,24 @@ main {
     width: 94px;
     height: 130px;
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
     position: relative;
     z-index: 0.9;
-    
+    cursor: pointer;
 }
 
 .bending-machine .list:hover {
     /* position: relative;
     width: 100px;
     height: 136px; */
-    outline: 3px solid #6327FE;
+    outline: 3px solid #6327fe;
     border-radius: 10px;
     /* transform: scale(1); */
 }
 
-
-
-
-.bending-machine .list:nth-child(-n+3) {
+.bending-machine .list:nth-child(-n + 3) {
     margin-bottom: 12px;
-
 }
 
 /* 품절 이미지 구현 */
@@ -117,25 +112,23 @@ main {
     color: #333333;
 }
 
-.bending-machine .bending-menu ul li>button {
-    background: #6327FE;
+.bending-machine .bending-menu ul li > button {
+    background: #6327fe;
     border-radius: 50px;
     width: 70px;
 
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
     line-height: 100%;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 5px 16px 5px 15px;
     margin-right: 12px;
     margin-left: 12px;
     margin-bottom: 9px;
     outline: none;
 }
-
-
 
 .bending-money {
     height: 75px;
@@ -148,9 +141,9 @@ main {
 .bending-money .money {
     width: 200px;
     height: 33px;
-    background: #EAE8FE;
+    background: #eae8fe;
     margin-right: 12px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
 }
 
@@ -165,17 +158,16 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
-.bending-money .minus-money>span {
+.bending-money .minus-money > span {
     text-align: right;
 }
 
 .bending-money .btn {
     width: 94px;
     height: 33px;
-    background: #FFFFFF;
+    background: #ffffff;
 
     /* border: none; */
     /* border: 1px solid #BDBDBD; */
@@ -187,38 +179,34 @@ main {
 }
 
 .bending-money .in {
-    background-color: #FFFFFF;
-
+    background-color: #ffffff;
 }
 
 .bending-money input {
     width: 197px;
     height: 30px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     box-sizing: border-box;
-
 }
 
 .bending-money #input-in::placeholder {
-    color: #BDBDBD;
+    color: #bdbdbd;
     padding-top: 6px;
     padding-bottom: 8px;
     padding-left: 6px;
-
 }
 
 .bending-get {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .bending-get .get-list {
     width: 200px;
     height: 106px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
-    background: #EAE8FE;
+    background: #eae8fe;
     width: 200px;
     display: flex;
     padding: 12px 6px 6px 10px;
@@ -231,7 +219,6 @@ main {
 
 .scroll::-webkit-scrollbar {
     width: 12px;
-
 }
 
 .scroll::-webkit-scrollbar-thumb {
@@ -247,14 +234,11 @@ main {
     background: transparent;
 }
 
-
-
-
 .bending-get .drink {
     display: flex;
     width: 170px;
     height: 46px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 5px;
     margin-bottom: 6px;
     padding: 6px 8px 7px 10px;
@@ -280,7 +264,7 @@ main {
 .bending-get .drink .get-num {
     width: 30px;
     height: 30px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
     position: relative;
     top: 1px;
@@ -293,29 +277,27 @@ main {
     color: #000000;
 }
 
-
 .bending-get .get-btn {
     width: 94px;
     padding: 43px 35px;
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-style: normal;
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 19px;
-    background: #6327FE;
-    color: #FFFFFF;
+    background: #6327fe;
+    color: #ffffff;
     /* filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3)); */
     border-radius: 5px;
     margin-left: 12px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-
 }
 
 .bending-my-money {
     background-color: darkorange;
     width: 360px;
     height: 50px;
-    background: #FFFFFF;
+    background: #ffffff;
     padding: 9px 27px;
 }
 
@@ -325,7 +307,7 @@ main {
 
     padding: 6px 10px;
     border-radius: 5px;
-    background: #EAE8FE;
+    background: #eae8fe;
     display: flex;
     justify-content: space-between;
 }
@@ -334,7 +316,6 @@ main {
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 20px;
-
 }
 
 .bending-my-money span:nth-child(2) {
@@ -342,12 +323,11 @@ main {
     font-size: 1.4rem;
     line-height: 20px;
     display: flex;
-
 }
 
 .bending-choose {
     margin-top: 20px;
-    background: #FFFFFF;
+    background: #ffffff;
     width: 360px;
     height: 474px;
     /* padding: 12px 18px 12px 12px; */
@@ -363,9 +343,9 @@ main {
 .bending-choose .get-contain {
     width: 304px;
     height: 362px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
-    background: #EAE8FE;
+    background: #eae8fe;
     display: flex;
     flex-direction: column;
     padding: 12px 18px 6px 12px;
@@ -378,7 +358,7 @@ main {
 .bending-choose .drink.get {
     display: flex;
     width: 276px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 5px;
     margin-bottom: 6px;
     padding: 6px 8px 7px 10px;
@@ -399,13 +379,12 @@ main {
     flex-grow: 1;
     text-align: left;
     color: #333333;
-
 }
 
 .bending-choose .get-num {
     width: 30px;
     height: 30px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
     position: relative;
     top: 1px;
@@ -417,10 +396,9 @@ main {
     font-size: 1.4rem;
 }
 
-.bending-choose .get-contain+.total-money {
+.bending-choose .get-contain + .total-money {
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 17px;
     text-align: right;
-
 }

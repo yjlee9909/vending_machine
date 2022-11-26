@@ -60,20 +60,20 @@
                     <h3 class="blind">물건 계산하기</h3>
                     <div class="money change">
                         <span class="minus-money">잔액 :</span>
-                        <span>1,000 원</span>
+                        <span class="return-money"> 원</span>
                     </div>
-                    <button class="btn">거스름돈 반환</button>
+                    <button class="btn return">거스름돈 반환</button>
                     <!-- <label for="input-in" class="blind">
                         입금액 입력</label> -->
-                    <input id="input-in" class="money in" placeholder="입금액 입력" required type="text"></input>
+                    <input id="input-in" class="money in" placeholder="입금액 입력" required type="number"></input>
                     
-                    <button class="btn">입금</button>
+                    <button class="btn put">입금</button>
                 </section>
                 <section class="bending-get">
                     <h3 class="blind">물건 담기</h3>
                     <div class="get-list scroll">
                         <ul>
-                            <li class="drink">
+                            <!-- <li class="drink">
                                 <img src="./images/Original_Cola.png" alt="오리지널 콜라">
                                 <p>Original_Cola</p>
                                 <span class="get-num">1</span>
@@ -91,7 +91,7 @@
                                 <img src="./images/Green_Cola.png" alt="그린 콜라">
                                 <p>Green_Cola</p>
                                 <span class="get-num">2</span>
-                            </li>
+                            </li> -->
                             
                         </ul>
                     </div>
@@ -104,7 +104,7 @@
                     <h3 class="blind">소지금</h3>
                     <div>
                         <span>소지금 :</span>
-                        <span>25,000 원</span>
+                        <span class="txt-mymoney">30,000 원</span>
                     </div>
                 </section>
                 <section class="bending-choose">
@@ -154,7 +154,7 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="total-money">총금액 : <span>9,000</span> 원
+                    <p class="total-money">총금액 : <span class="txt-total">0</span> 원
                     </p>
                 </section>
             </section>

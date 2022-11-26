@@ -180,6 +180,9 @@ main {
 
 .bending-money .in {
     background-color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: "Noto Sans KR";
 }
 
 .bending-money input {
@@ -187,13 +190,17 @@ main {
     height: 30px;
     border: 1px solid #bdbdbd;
     box-sizing: border-box;
+    padding-left: 6px;
 }
 
 .bending-money #input-in::placeholder {
     color: #bdbdbd;
     padding-top: 6px;
     padding-bottom: 8px;
-    padding-left: 6px;
+
+    font-family: "Noto Sans KR";
+    font-size: 13px;
+    margin-left: 6px;
 }
 
 .bending-get {

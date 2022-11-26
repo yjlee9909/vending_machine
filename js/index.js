@@ -46,9 +46,16 @@ const inpMoneyFunc = (e) => {
         inpMoney.value = null;
     }
 };
-btnReturn.addEventListener("click", () => {
-    console.log("hi");
-});
+const retMoneyFunc = (e) => {
+    const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
+    const intMyMoney = parseInt(txtMyMoney.textContent.replaceAll(",", ""));
+    // 잔액 금액 초기화
+    if (intReMoney) {
+        txtMyMoney.textContent = (intReMoney + intMyMoney).toLocaleString() + " 원";
+        returnMoney.textContent = "원";
+    }
+};
+btnReturn.addEventListener("click", retMoneyFunc);
 btnPut.addEventListener("click", inpMoneyFunc);
 getBtn.addEventListener("click", () => {
     console.log("hee3333ei");

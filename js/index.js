@@ -16,6 +16,8 @@ const getData = async () => {
     const docFrag = document.createDocumentFragment();
     productData.forEach((item) => {
         const stagedItem = document.createElement("li");
+        stagedItem.dataset.cost = item.cost;
+        stagedItem.dataset.name = item.name;
         stagedItem.classList = "list";
         stagedItem.innerHTML = `
             <img src="./images/${item.img}" alt=${item.name}>
@@ -25,6 +27,8 @@ const getData = async () => {
         docFrag.appendChild(stagedItem);
     });
     itemList.appendChild(docFrag);
+
+    inpMoneyFunc();
 };
 getData();
 
@@ -45,6 +49,15 @@ const inpMoneyFunc = (e) => {
         }
         inpMoney.value = null;
     }
+    // 음료 선택 기능
+    const itemDetail = itemList.querySelectorAll(".list");
+    itemDetail.forEach((item) => {
+        console.log(item);
+        item.addEventListener("click", (e) => {
+            console.log(item.dataset.cost);
+            console.log(item.dataset.name);
+        });
+    });
 };
 const retMoneyFunc = (e) => {
     const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
@@ -55,16 +68,6 @@ const retMoneyFunc = (e) => {
         returnMoney.textContent = "원";
     }
 };
-
-// 음료 선택하기
-const itemDetail = itemList.querySelectorAll(".list");
-itemDetail.forEach((item) => {
-    console.log(item);
-    // item.addEventListener("click", (e) => {
-    //     console.log(e.currentTarget);
-    //     console.log("hi");
-    // });
-});
 
 btnReturn.addEventListener("click", retMoneyFunc);
 btnPut.addEventListener("click", inpMoneyFunc);

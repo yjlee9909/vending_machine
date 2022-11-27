@@ -27,14 +27,11 @@ const getData = async () => {
         docFrag.appendChild(stagedItem);
     });
     itemList.appendChild(docFrag);
-
-    inpMoneyFunc();
 };
 getData();
 
 const inpMoneyFunc = (e) => {
     const moneyValue = inpMoney.value;
-    // console.log(moneyValue);
     const intMyMoney = parseInt(txtMyMoney.textContent.replaceAll(",", ""));
     const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
     if (moneyValue) {
@@ -49,13 +46,20 @@ const inpMoneyFunc = (e) => {
         }
         inpMoney.value = null;
     }
+    selItem();
+};
+const selItem = () => {
     // 음료 선택 기능
     const itemDetail = itemList.querySelectorAll(".list");
+    const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
     itemDetail.forEach((item) => {
-        console.log(item);
         item.addEventListener("click", (e) => {
-            console.log(item.dataset.cost);
-            console.log(item.dataset.name);
+            // e.preventDefault();
+            if (intReMoney >= 1000) {
+                console.log(item.dataset.cost);
+                console.log(item.dataset.name);
+                console.log("hi");
+            }
         });
     });
 };
@@ -69,5 +73,5 @@ const retMoneyFunc = (e) => {
     }
 };
 
-btnReturn.addEventListener("click", retMoneyFunc);
 btnPut.addEventListener("click", inpMoneyFunc);
+btnReturn.addEventListener("click", retMoneyFunc);

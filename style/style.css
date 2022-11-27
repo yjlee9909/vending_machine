@@ -68,6 +68,9 @@ main {
     z-index: 0.9;
     cursor: pointer;
 }
+.bending-machine .list-btn-wrapper {
+    width: 100%;
+}
 
 .bending-machine .list:hover {
     /* position: relative;
@@ -112,7 +115,7 @@ main {
     color: #333333;
 }
 
-.bending-machine .bending-menu ul li > button {
+.bending-machine .bending-menu ul li > button.price-btn {
     background: #6327fe;
     border-radius: 50px;
     width: 70px;

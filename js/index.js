@@ -18,9 +18,9 @@ const getData = async () => {
         const stagedItem = document.createElement("li");
         stagedItem.classList = "list";
         stagedItem.innerHTML = `
-        <img src="./images/${item.img}" alt=${item.name}>
-                            <p>${item.name}</p>
-                            <button>${item.cost}원</button>
+            <img src="./images/${item.img}" alt=${item.name}>
+            <p>${item.name}</p>
+            <button class='price-btn'>${item.cost}원</button>
         `;
         docFrag.appendChild(stagedItem);
     });
@@ -55,8 +55,16 @@ const retMoneyFunc = (e) => {
         returnMoney.textContent = "원";
     }
 };
+
+// 음료 선택하기
+const itemDetail = itemList.querySelectorAll(".list");
+itemDetail.forEach((item) => {
+    console.log(item);
+    // item.addEventListener("click", (e) => {
+    //     console.log(e.currentTarget);
+    //     console.log("hi");
+    // });
+});
+
 btnReturn.addEventListener("click", retMoneyFunc);
 btnPut.addEventListener("click", inpMoneyFunc);
-getBtn.addEventListener("click", () => {
-    console.log("hee3333ei");
-});

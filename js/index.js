@@ -48,17 +48,24 @@ const inpMoneyFunc = (e) => {
     }
     selItem();
 };
-const selItem = () => {
+const selItem = (e) => {
     // 음료 선택 기능
     const itemDetail = itemList.querySelectorAll(".list");
     const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
+
     itemDetail.forEach((item) => {
         item.addEventListener("click", (e) => {
             // e.preventDefault();
-            if (intReMoney >= 1000) {
+            const targetEl = e.currentTarget;
+            const targetElPrice = parseInt(targetEl.dataset.cost);
+            if (intReMoney >= targetElPrice) {
+                // 잔액
+                returnMoney.textContent = (intReMoney - targetElPrice).toLocaleString() + " 원";
                 console.log(item.dataset.cost);
                 console.log(item.dataset.name);
                 console.log("hi");
+            } else {
+                alert("잔액이 부족합니다.");
             }
         });
     });

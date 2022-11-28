@@ -70,17 +70,17 @@ itemDetail.forEach((item) => {
     item.addEventListener("click", (e) => {
         // e.preventDefault();
         console.log(e.currentTarget);
-        // const targetEl = e.currentTarget;
-        // const targetElPrice = parseInt(targetEl.dataset.cost);
-        // if (intReMoney >= targetElPrice) {
-        //     // 잔액
-        //     returnMoney.textContent = (intReMoney - targetElPrice).toLocaleString() + " 원";
-        //     console.log(item.dataset.cost);
-        //     console.log(item.dataset.name);
-        //     console.log("hi");
-        // } else {
-        //     alert("잔액이 부족합니다.");
-        // }
+        const targetEl = e.currentTarget;
+        const targetElPrice = parseInt(targetEl.dataset.cost);
+        if (intReMoney >= targetElPrice) {
+            // 잔액
+            returnMoney.textContent = (intReMoney - targetElPrice).toLocaleString() + " 원";
+            console.log(item.dataset.cost);
+            console.log(item.dataset.name);
+            console.log("hi");
+        } else {
+            alert("잔액이 부족합니다.");
+        }
     });
 });
 

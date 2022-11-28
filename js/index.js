@@ -7,6 +7,7 @@ const btnPut = main.querySelector(".btn.put");
 const getBtn = main.querySelector(".get-btn");
 const txtMyMoney = main.querySelector(".txt-mymoney");
 const txtTotal = main.querySelector(".txt-total");
+const stagedList = main.querySelector(".list-item-staged");
 
 // json에서 데이터 받아오기
 const getData = async () => {
@@ -27,6 +28,7 @@ const getData = async () => {
         docFrag.appendChild(stagedItem);
     });
     itemList.appendChild(docFrag);
+    return productData;
 };
 getData();
 
@@ -46,30 +48,42 @@ const inpMoneyFunc = (e) => {
         }
         inpMoney.value = null;
     }
-    selItem();
 };
-const selItem = (e) => {
-    // 음료 선택 기능
-    const itemDetail = itemList.querySelectorAll(".list");
-    const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
+// 선택 음료 목록 생성
+const stagedItemGenerator = (target) => {
+    const stagedItem = document.createAttribute("li");
+    stagedItem.classList = "drink";
+    stagedItem.dataset.name = target.dataset.name;
+    stagedItem.dataset.cost = target.dataset.cost;
+    stagedItem.innerHTML = `
+    <img src="./images/${target.dataset.img}" alt="">
+    <p>${target.dataset.name}</p>
+    <span class="get-num">2</span>
+    `;
+    stagedList.appendChild(stagedItem);
+};
 
-    itemDetail.forEach((item) => {
-        item.addEventListener("click", (e) => {
-            // e.preventDefault();
-            const targetEl = e.currentTarget;
-            const targetElPrice = parseInt(targetEl.dataset.cost);
-            if (intReMoney >= targetElPrice) {
-                // 잔액
-                returnMoney.textContent = (intReMoney - targetElPrice).toLocaleString() + " 원";
-                console.log(item.dataset.cost);
-                console.log(item.dataset.name);
-                console.log("hi");
-            } else {
-                alert("잔액이 부족합니다.");
-            }
-        });
+// 음료 선택 기능
+const itemDetail = itemList.querySelectorAll(".list");
+const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
+itemDetail.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        // e.preventDefault();
+        console.log(e.currentTarget);
+        // const targetEl = e.currentTarget;
+        // const targetElPrice = parseInt(targetEl.dataset.cost);
+        // if (intReMoney >= targetElPrice) {
+        //     // 잔액
+        //     returnMoney.textContent = (intReMoney - targetElPrice).toLocaleString() + " 원";
+        //     console.log(item.dataset.cost);
+        //     console.log(item.dataset.name);
+        //     console.log("hi");
+        // } else {
+        //     alert("잔액이 부족합니다.");
+        // }
     });
-};
+});
+
 const retMoneyFunc = (e) => {
     const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
     const intMyMoney = parseInt(txtMyMoney.textContent.replaceAll(",", ""));

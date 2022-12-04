@@ -71,8 +71,10 @@ main {
 .bending-machine .list-btn-wrapper {
     width: 100%;
 }
-
-.bending-machine .list:hover {
+.bending-machine .btn-item {
+    width: 100%;
+}
+.bending-machine .btn-item:hover {
     /* position: relative;
     width: 100px;
     height: 136px; */
@@ -115,11 +117,11 @@ main {
     color: #333333;
 }
 
-.bending-machine .bending-menu ul li > button.price-btn {
+.bending-machine .bending-menu .price-btn {
     background: #6327fe;
     border-radius: 50px;
     width: 70px;
-
+    display: inline-block;
     font-family: "Noto Sans KR";
     font-weight: 500;
     font-style: normal;

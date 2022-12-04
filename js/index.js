@@ -21,9 +21,11 @@ const getData = async () => {
         stagedItem.dataset.name = item.name;
         stagedItem.classList = "list";
         stagedItem.innerHTML = `
+        <button type='button' class='btn-item' data-item="${item.name}" data-count="${item.count}" data-price="${item.cost}" data-img="${item.img}">
             <img src="./images/${item.img}" alt=${item.name}>
             <p>${item.name}</p>
-            <button class='price-btn'>${item.cost}원</button>
+            <span class='price-btn'>${item.cost}원</span>
+        </button>
         `;
         docFrag.appendChild(stagedItem);
     });
@@ -64,11 +66,12 @@ const stagedItemGenerator = (target) => {
 };
 
 // 음료 선택 기능
-const itemDetail = itemList.querySelectorAll(".list");
+const itemDetail = itemList.querySelectorAll(".btn-item");
 const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
 itemDetail.forEach((item) => {
     item.addEventListener("click", (e) => {
         // e.preventDefault();
+        console.log("hi");
         console.log(e.currentTarget);
         const targetEl = e.currentTarget;
         const targetElPrice = parseInt(targetEl.dataset.cost);

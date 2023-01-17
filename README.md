@@ -6,4 +6,5 @@ https://www.figma.com/file/c4mPUK5xcqzzRVBadSu6BG/%EB%A9%8B%EC%82%AC_%ED%94%84%E
 
 ## 기능 추가 예정
 
--   잔액이 있다면 음료 버튼 클릭 가능
+- 잔액이 있다면 음료 버튼 클릭 가능
+- 아이템 클릭하면 장바구니에 담기

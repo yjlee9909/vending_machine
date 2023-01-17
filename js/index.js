@@ -52,39 +52,43 @@ const inpMoneyFunc = (e) => {
   if (moneyValue) {
     if (moneyValue <= intMyMoney && moneyValue > 0) {
       // 잔액에 금액 표시하기
-      returnMoney.textContent = Number(parseInt(intReMoney ? intReMoney : 0) + parseInt(moneyValue)).toLocaleString() + " 원";
+      returnMoney.textContent =
+        Number(
+          parseInt(intReMoney ? intReMoney : 0) + parseInt(moneyValue)
+        ).toLocaleString() + " 원";
 
       // 소지금 액수 차감
-      txtMyMoney.textContent = (intMyMoney - moneyValue).toLocaleString() + " 원";
+      txtMyMoney.textContent =
+        (intMyMoney - moneyValue).toLocaleString() + " 원";
     } else {
       alert("소지금이 부족합니다.");
     }
     inpMoney.value = null;
   }
 };
-// 선택 음료 목록 생성
+// 선택 음료 목록 생성 (장바구니 추가)
 // const stagedItemGenerator = (target) => {
-//     const stagedItem = document.createAttribute("li");
-//     stagedItem.classList = "drink";
-//     stagedItem.dataset.name = target.dataset.name;
-//     stagedItem.dataset.cost = target.dataset.cost;
-//     stagedItem.innerHTML = `
+//   const stagedItem = document.createAttribute("li");
+//   stagedItem.classList = "drink";
+//   stagedItem.dataset.name = target.dataset.name;
+//   stagedItem.dataset.cost = target.dataset.cost;
+//   stagedItem.innerHTML = `
 //     <img src="./images/${target.dataset.img}" alt="">
 //     <p>${target.dataset.name}</p>
 //     <span class="get-num">2</span>
 //     `;
-//     stagedList.appendChild(stagedItem);
+//   stagedList.appendChild(stagedItem);
 // };
 
 // 음료 선택 기능
 
 // const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
 // itemDetail.forEach((item) => {
-//     item.addEventListener('click', (event) => {
-//         console.log(item)
-//         console.log(event.currentTarget)
-//     })
-// })
+//   item.addEventListener("click", (event) => {
+//     console.log(item);
+//     console.log(event.currentTarget);
+//   });
+// });
 
 const retMoneyFunc = (e) => {
   const intReMoney = parseInt(returnMoney.textContent.replaceAll(",", ""));
@@ -103,9 +107,28 @@ getData()
     return data;
   })
   .then((data) => {
+    // 음료 선택 기능
     itemDetail.forEach((item) => {
       item.addEventListener("click", (event) => {
-        console.log(item);
+        // console.log(item);
+        console.log("음료선택:", event.currentTarget);
+        const curTargetEl = event.currentTarget;
+        const intReMoney = parseInt(
+          returnMoney.textContent.replaceAll(",", "")
+        );
+        let isStaged = false; // 이미 선택
+        const curTargetElPrice = parseInt(curTargetEl.dataset.price);
+        const stagedItem = document.createAttribute("li");
+        stagedItem.classList = "drink";
+        stagedItem.dataset.name = target.dataset.name;
+        stagedItem.dataset.cost = target.dataset.cost;
+        stagedItem.innerHTML = `
+    <img src="./images/${target.dataset.img}" alt="">
+    <p>${target.dataset.name}</p>
+    <span class="get-num">2</span>
+    `;
+        stagedList.appendChild(stagedItem);
+        // 선택 음료 목록 생성 (장바구니 추가)
       });
     });
   });

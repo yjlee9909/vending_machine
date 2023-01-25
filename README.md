@@ -2,9 +2,7 @@
 
 ### 배포 주소 : https://yjlee9909.github.io/vending_machine/
 
-<img width="100%" height="100%" src="
-[https://user-images.githubusercontent.com/63508955/214491076-11573828-7de5-4996-9e87-40fbf2de97d9.gif)
-"></img>
+<img width="100%" height="100%" src="https://user-images.githubusercontent.com/63508955/214491076-11573828-7de5-4996-9e87-40fbf2de97d9.gif"></img>
 
 ### 기능 설명
 

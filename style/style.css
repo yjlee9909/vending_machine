@@ -11,7 +11,6 @@ body {
 }
 
 #wrapper {
-  width: 748px;
   margin: 0 auto;
   text-align: center;
 }
@@ -34,22 +33,19 @@ header h1 {
 
 main {
   display: flex;
+  justify-content: center;
 }
 
 .bending-machine {
   background: #ffffff;
   width: 360px;
-  height: 545px;
+  height: 100%;
   margin-right: 28px;
   padding: 31px 27px 28px 27px;
 }
 
 .bending-machine h2 {
   display: none;
-}
-
-.bending-machine .bending-menu {
-  /* margin: 31px 24px 17px 24px; */
 }
 
 .bending-machine .bending-menu ul {
@@ -75,12 +71,8 @@ main {
   width: 100%;
 }
 .bending-machine .btn-item:hover {
-  /* position: relative;
-    width: 100px;
-    height: 136px; */
   outline: 3px solid #6327fe;
   border-radius: 10px;
-  /* transform: scale(1); */
 }
 
 .bending-machine .list:nth-child(-n + 3) {
@@ -113,7 +105,6 @@ main {
   margin-left: 11px;
   font-weight: 500;
   font-size: 0.9rem;
-  /* line-height: 1.3rem; */
   color: #333333;
 }
 
@@ -173,13 +164,9 @@ main {
   width: 94px;
   height: 33px;
   background: #ffffff;
-
-  /* border: none; */
-  /* border: 1px solid #BDBDBD; */
   border-radius: 5px;
   font-size: 1.3rem;
   line-height: 19px;
-  /* filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3)); */
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
 }
 
@@ -202,7 +189,6 @@ main {
   color: #bdbdbd;
   padding-top: 6px;
   padding-bottom: 8px;
-
   font-family: "Noto Sans KR";
   font-size: 13px;
   margin-left: 6px;
@@ -222,11 +208,8 @@ main {
   width: 200px;
   display: flex;
   padding: 12px 6px 6px 10px;
-  /* overflow: auto; */
   overflow-y: scroll;
   flex-direction: column;
-  /* overflow-y: scroll;
-    scrollbar-color: rebeccapurple green; */
 }
 
 .scroll::-webkit-scrollbar {
@@ -249,8 +232,6 @@ main {
 .bending-get .drink,
 .bending-choose .drink {
   display: flex;
-  /* width: 170px; */
-  /* height: 46px; */
   background-color: #ffffff;
   border-radius: 5px;
   margin-bottom: 6px;
@@ -302,7 +283,6 @@ main {
   line-height: 19px;
   background: #6327fe;
   color: #ffffff;
-  /* filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3)); */
   border-radius: 5px;
   margin-left: 12px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
@@ -319,7 +299,6 @@ main {
 .bending-my-money div {
   width: 306px;
   height: 32px;
-
   padding: 6px 10px;
   border-radius: 5px;
   background: #eae8fe;
@@ -345,7 +324,6 @@ main {
   background: #ffffff;
   width: 360px;
   height: 474px;
-  /* padding: 12px 18px 12px 12px; */
   padding: 25px 27px 26px 27px;
 }
 
@@ -356,7 +334,6 @@ main {
 }
 
 .bending-choose .get-contain {
-  /* width: 304px; */
   height: 362px;
   border: 1px solid #bdbdbd;
   border-radius: 5px;
@@ -364,7 +341,6 @@ main {
   display: flex;
   flex-direction: column;
   padding: 12px 18px 6px 12px;
-  /* margin: 13px 27px 26px 27px; */
   margin-top: 13px;
   margin-bottom: 6px;
   overflow-y: scroll;
@@ -402,4 +378,40 @@ main {
   font-size: 1.2rem;
   line-height: 17px;
   text-align: right;
+}
+
+/* 반응형 추가 */
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #fff;
+  }
+
+  header {
+    margin-bottom: 18px;
+  }
+
+  .logo_contain {
+    width: 166px;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bending-machine {
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  .bending-choose {
+    padding-top: 0;
+    margin-top: 41px;
+  }
 }

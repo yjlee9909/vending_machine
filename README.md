@@ -1,4 +1,4 @@
-# vending_machine
+# 🥤 벤딩머신
 
 ### 배포 주소 : https://yjlee9909.github.io/vending_machine/
 
